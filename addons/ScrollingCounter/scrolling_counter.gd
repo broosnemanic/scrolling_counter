@@ -69,7 +69,8 @@ func _ready() -> void:
 func _process(_delta):
 	check_is_counting_complete()
 	if not is_queue_paused and not is_counting:
-		do_counting()
+		if not points_queue.is_empty():
+			do_counting()
 
 
 # As it says
@@ -169,7 +170,7 @@ func do_counting():
 		t_rate = point_rate
 	else:
 		t_rate = chunk_rate * t_points		# chunk/sec * points/chunk ->points/sec
-	var is_fast_counting: bool = t_rate > MAX_SLOW_COUNTING_RATE
+	var is_fast_counting: bool = abs(t_rate) > MAX_SLOW_COUNTING_RATE
 	if points == 0:
 		set_sign_color(t_points > 0)
 	if not is_fast_counting:
@@ -258,7 +259,7 @@ func on_fast_counting_completed():
 # Fastest moving place that is slower than MAX_SLOW_COUNTING_RATE
 # Digits will scroll faster as the register decreases - so fastest -> lowest
 func fastest_slow_counting_register(a_rate: float, a_guess: int) -> int:
-	var t_rate: float = a_rate / pow(10, a_guess)
+	var t_rate: float = abs(a_rate / pow(10, a_guess))
 	if t_rate <= MAX_SLOW_COUNTING_RATE:
 		return a_guess
 	else:

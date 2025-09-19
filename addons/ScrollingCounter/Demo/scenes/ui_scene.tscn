@@ -1,9 +1,9 @@
 [gd_scene load_steps=19 format=3 uid="uid://u3crrkulevo0"]
 
-[ext_resource type="Script" path="res://addons/ScrollingCounter/Demo/scripts/counter_example.gd" id="1_3a7pw"]
-[ext_resource type="Script" path="res://addons/ScrollingCounter/scrolling_counter.gd" id="2_b8ejk"]
+[ext_resource type="Script" uid="uid://c7ni8sxd81mk5" path="res://addons/ScrollingCounter/Demo/scripts/counter_example.gd" id="1_3a7pw"]
+[ext_resource type="Script" uid="uid://cldnqntmt6sc8" path="res://addons/ScrollingCounter/scrolling_counter.gd" id="2_b8ejk"]
 [ext_resource type="Texture2D" uid="uid://4eusyb7jyyy7" path="res://addons/ScrollingCounter/number_strip.png" id="3_60eip"]
-[ext_resource type="Script" path="res://addons/ScrollingCounter/Demo/scripts/digit_texture_button.gd" id="4_0jxkj"]
+[ext_resource type="Script" uid="uid://jp0pl550bd7a" path="res://addons/ScrollingCounter/Demo/scripts/digit_texture_button.gd" id="4_0jxkj"]
 [ext_resource type="Texture2D" uid="uid://dyu4qcblixao7" path="res://addons/ScrollingCounter/Demo/textures/number_strip_alt01.png" id="5_05cuo"]
 [ext_resource type="Texture2D" uid="uid://um05yg21hqrb" path="res://addons/ScrollingCounter/Demo/textures/werewolf_faces_small.png" id="6_11pa8"]
 
